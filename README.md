@@ -23,7 +23,8 @@ An open-source version of HubSpot's Facewall and Facewall game. __More informati
       },
       // ...
    ]
-}```
+}
+```
 
 ## Running
 
