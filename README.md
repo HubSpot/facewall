@@ -10,7 +10,7 @@ An open-source version of HubSpot's Facewall and Facewall game. __More informati
 
 - Next, you'll want to configure [employees.coffee](https://github.com/HubSpot/facewall/blob/master/app/collections/employees.coffee) with either a URL or `USER_JSON` string. The format of the JSON needs to be the following:
 
-```json
+```javascript
 {
    "users":[
       {
