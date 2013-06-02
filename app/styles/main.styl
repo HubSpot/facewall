@@ -1,0 +1,858 @@
+@import nib
+
+// Mixins
+
+pie-clearfix()
+    &:before, &:after
+        content " "
+        display table
+
+    &:after
+        clear both
+
+    *zoom 1
+
+// Loader
+
+#loader
+    position fixed
+    top 50%
+    left 50%
+    width 120px
+    height 120px
+    margin-top -60px
+    margin-left -60px
+    background rgba(0, 0, 0, 0.6)
+    box-shadow inset 0 0 4px rgba(0, 0, 0, 0.06)
+    border-radius 999px
+    content "\30AF"
+    display block
+    font-size 82px
+    line-height 127px
+    color rgba(255, 255, 255, 0.4)
+    text-shadow 0 -1px rgba(0, 0, 0, 0.4)
+    font-weight bold
+    text-align center
+    -webkit-perspective 1000
+    -webkit-backface-visibility hidden
+    -webkit-animation loader 10s
+    -webkit-animation-iteration-count infinite
+
+@-webkit-keyframes loader
+    0%
+        opacity 0
+        -webkit-transform scale(0.8)
+
+    20%
+        opacity 1
+        -webkit-transform scale(0.8)
+
+    24%
+        opacity 1
+        -webkit-transform scale(0.9)
+
+    28%
+        opacity 1
+        -webkit-transform scale(0.8)
+
+    40%
+        opacity 1
+        -webkit-transform scale(0.8)
+
+    44%
+        opacity 1
+        -webkit-transform scale(0.9)
+
+    48%
+        opacity 1
+        -webkit-transform scale(0.8)
+
+    52%
+        opacity 1
+        -webkit-transform scale(0.9)
+
+    60%
+        opacity 1
+        -webkit-transform scale(0.8)
+
+    70%
+        opacity 0
+        -webkit-transform scale(0.8)
+
+    100%
+        opacity 0
+        -webkit-transform scale(0.8)
+
+// 404
+
+#facewall-web
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+// Globals
+
+html
+    overflow-y scroll
+
+body, *
+    font-family "Helvetica Neue"
+
+body, *, *:hover, a, a:hover, a.employee, .facewall-search, .facewall-search *, .facewall-search *:hover
+    cursor url(../cursor/cursor_32.ico) 8 4, default
+    user-select none
+
+footer
+    transition opacity 0.4s
+    opacity 0.53
+    text-align center
+    padding 60px 20px
+    font-size 15px
+    display none
+
+    &:hover
+        opacity 0.99
+
+p.facewall-styled
+    color rgb(91, 115, 130)
+    font-weight 100
+    font-size 20px
+    margin .5em 0 1.3em
+
+.full-screen-fixed
+    position fixed
+    top 0
+    left 0
+    bottom 0
+    right 0
+    width 100%
+    height 100%
+
+.modal
+    position fixed
+    top 10%
+    margin-top 0
+    bottom 10%
+    background rgba(255, 255, 255, 0.8)
+    border 0
+    box-shadow none
+    border-radius 0
+    padding 0
+    background transparent
+
+    .modal-header, .modal-body, .modal-footer
+        position absolute
+        width 100%
+        box-sizing border-box
+        background transparent
+
+    .modal-header
+        top 0
+        border-bottom 1px solid #eee
+        height: 43px
+
+    .modal-body
+        position absolute
+        overflow scroll
+        top 43px
+        bottom 80px
+        max-height 100%
+
+    .modal-footer
+        bottom 0
+        border-top 1px solid #eee
+        height: 80px
+
+.modal-backdrop
+    background #fff
+    opacity 0.93
+
+.btn
+    border-radius: 0
+    font-size: 24px
+    padding: 15px 30px
+    background: #fff
+    color rgb(91, 115, 130)
+
+    &:hover
+        background #fff
+        color rgb(91, 115, 130)
+
+.btn.btn-primary
+    background: rgb(91, 115, 130)
+    color #fff
+
+@media (max-width: 480px)
+
+    .modal
+        position fixed
+        top 10px
+
+// Facewall stuff
+
+@-webkit-keyframes facewall-flyin
+    0%
+        opacity 0
+        -webkit-transform scale(0.5)
+
+    100%
+        opacity 1
+        -webkit-transform scale(1)
+
+@-webkit-keyframes facewall-fadein
+    0%
+        opacity 0
+
+    100%
+        opacity 1
+
+@-webkit-keyframes flipInY
+    0%
+        -webkit-transform rotateY(90deg)
+        opacity 0
+
+    40%
+        -webkit-transform rotateY(-10deg)
+        opacity 1
+
+    70%
+        -webkit-transform rotateY(10deg)
+        opacity 1
+
+    100%
+        -webkit-transform rotateY(0deg)
+        opacity 1
+
+@-webkit-keyframes featureEmployee
+    0%
+        height 550px
+    100%
+        height 800px
+
+.facewall-flyin
+    -webkit-perspective 1000
+    -webkit-backface-visibility hidden
+    -webkit-animation facewall-flyin 0.7s
+
+.facewall-fadein
+    -webkit-perspective 1000
+    -webkit-backface-visibility hidden
+    -webkit-animation facewall-fadein 0.7s
+
+.facewall-flipInY
+    -webkit-animation-duration 2s
+    -webkit-animation-fill-mode both
+    -webkit-backface-visibility visible !important
+    -webkit-animation-name flipInY
+
+.facewall-featureEmployee-and-flipInY
+    -webkit-animation-fill-mode both
+    -webkit-backface-visibility visible !important
+    -webkit-animation featureEmployee, flipInY
+    -webkit-animation-duration 1s, 2s
+
+.facewall
+    z-index 100
+    -webkit-perspective 700
+    -webkit-transform-style preserve-3d
+    pie-clearfix()
+
+    &.with-scroll
+        overflow-y auto
+        overflow-x
+
+    .employee
+        pie-clearfix()
+        display block
+        float left
+        position relative
+        background rgba(41, 65, 80, 0.7)
+        box-shadow 0 0 0 1px rgb(41, 65, 80), inset 0 1px rgba(255, 255, 255, 0.4)
+
+        .name
+            position absolute
+            top 50%
+            margin-top -34px
+            padding 10px
+            overflow hidden
+            width 100%
+            box-sizing border-box
+            color rgba(255, 255, 255, 0.8)
+            font-size 45px
+            line-height 45px
+            text-align center
+            font-weight 100
+            transition opacity 0.2s
+            opacity 0
+
+        &:hover .name
+            opacity 1
+
+        .photo
+            width 100%
+            height 100%
+            -webkit-filter grayscale(1)
+            transition -webkit-filter 0.4s, opacity 0.4s
+            opacity 0.5
+
+        &.featured
+            box-shadow 0 0 0 7px rgba(33, 211, 133, 1), 0 0 47px 7px rgba(33, 211, 133, 1), 0 0 72px 70px rgba(33, 211, 133, 0.2)
+            border-radius 20px
+            z-index 150
+
+            .photo
+                border-radius 20px
+                opacity 1
+                -webkit-filter grayscale(0)
+
+        &.featured-employee.featured
+            box-shadow 0 0 0 13px rgba(33, 211, 133, 1), 0 0 47px 7px rgba(33, 211, 133, 1), 0 0 72px 70px rgba(33, 211, 133, 0.2)
+            position fixed
+            width 600px
+            height 800px
+            left 50%
+            top 50%
+            margin-left -300px
+            margin-top -390px
+            overflow hidden
+
+            .name
+                opacity 1
+                z-index 10
+                font-size 120px
+                line-height 120px
+                left 0
+                top 634px
+                padding 11px 40px
+                -webkit-text-stroke 1px rgba(0, 0, 0, 0.3)
+                font-weight 100
+                text-shadow 0 0 84px rgba(0, 0, 0, 0.9)
+                background rgba(51, 68, 80, 0.7)
+                border-radius 0 0 20px 20px
+                border-top 2px solid rgba(0, 255, 143, 0.41)
+                color #fff
+                height 200px
+
+            .role
+                z-index: 10
+                left: 0
+                top: 747px
+                -webkit-text-stroke: 1px rgba(0, 0, 0, 0.30)
+                font-weight: 100
+                text-shadow: 0 0 84px rgba(0, 0, 0, 0.90)
+                color: #fff
+                height: 30px
+                position: absolute
+                font-size: 50px
+                opacity: 0.7
+                text-align: center
+                width: 100%
+
+            .photo
+                width 600px
+                height 600px
+                border-radius 20px 20px 0 0
+
+    .employee-row
+
+        .employee
+
+            &:first-child, &:first-child .photo
+                border-top-left-radius 0
+                border-bottom-left-radius 0
+
+            &:last-child, &:last-child .photo
+                border-top-right-radius 0
+                border-bottom-right-radius 0
+
+        &:first-child .employee, &:first-child .employee .photo
+            border-top-left-radius 0
+            border-top-right-radius 0
+
+        &:last-child .employee, &:last-child .employee .photo
+            border-bottom-left-radius 0
+            border-bottom-right-radius 0
+
+    .employee
+        -webkit-transition -webkit-transform 1s ease-in-out
+
+    &.facewall-threedee
+
+        .employee
+            -webkit-transform translateZ(-100px)
+
+            &.featured
+                -webkit-transform translateZ(0)
+                -webkit-box-shadow 0 0 0 5px rgba(33, 211, 133, 1), 0 0 47px 7px rgba(33, 211, 133, 1), 0 0 72px 70px rgba(33, 211, 133, 0.20), 0 70px 35px rgba(0, 0, 0, 0.8)
+                border-radius 20px
+
+                .photo
+                    border-radius 20px
+
+            &.featured-employee.featured
+                display none
+
+.facewall-search
+    display none
+    position fixed
+    z-index: 120
+    color rgba(255, 255, 255, 0.8)
+    text-shadow 0 0 70px rgba(0, 0, 0, 0.8)
+    top 50px
+    left 50px
+    box-shadow 0 0 0 7px rgba(33, 211, 133, 1), 0 0 47px 7px rgba(33, 211, 133, 1), 0 0 72px 70px rgba(33, 211, 133, 0.2)
+    background rgba(41, 65, 80, 0.7)
+    border-radius 20px
+    padding 36px 27px 26px 110px
+    font-size 60px
+    font-weight 100
+    white-space pre
+    line-height 37px
+
+    &:before
+        display block
+        content " "
+        position absolute
+        top 15px
+        left 17px
+        opacity 0.7
+        height 80px
+        width 80px
+        background url(http://cdn1.hubspot.com.s3.amazonaws.com/static/sprocket_white_80.png)
+        background-repeat no-repeat
+
+    &.facewall-search-opened
+        display block
+
+.facewall-game
+
+    .employee-sidebar-wrapper
+        opacity 0.8
+        transition opacity 0.7s
+
+        &:hover
+            opacity 1
+
+    .employee-sidebar
+        top 0
+        position fixed
+        height 100%
+        width 160px
+        background #445560
+        background-size 160px 160px
+        box-shadow 0 0 0 1px rgb(41, 65, 80)
+        perspective 1000
+        backface-visibility hidden
+        animation facewall-sidebar linear 120s
+        animation-direction normal
+        animation-iteration-count 3
+
+        &.top
+            top -1600px
+
+        &.left
+            left -80px
+
+            .employee
+
+                &:hover
+                    left auto
+                    right -80px
+
+                .name
+                    text-align left
+                    right 0
+                    margin-right -300%
+
+        &.right
+            right -80px
+
+            .employee
+
+                &:hover
+                    right auto
+                    left -80px
+
+                .name
+                    text-align right
+                    left 0
+                    margin-left -300%
+
+        .employee
+            display block
+            position absolute
+            background rgb(41, 65, 80)
+            width 160px
+            height 160px
+            transition left 0.3s, right 0.3s
+
+            .name
+                top 0
+                margin-top 0
+                position absolute
+                width 300%
+                padding 0px 30px
+                height 100%
+                box-sizing border-box
+                line-height 50px
+                font-size 34px
+                opacity 0
+                white-space nowrap
+                overflow hidden
+                text-overflow ellipsis
+                color rgb(91, 115, 130)
+
+            &:hover
+
+                .name
+                    opacity 1 !important
+
+    .game-title, .score-board
+        color #294150
+        font-weight 100
+        font-size 47px
+        line-height 50px
+        position fixed
+        bottom 60px
+        z-index 6
+        background rgba(255, 255, 255, 0.6)
+        padding 40px
+        box-shadow 0 0 0 1px #fff
+        border-radius 80px
+
+        .small-label
+            width 0
+            font-size 30px
+            line-height 22px
+            position relative
+            font-weight 600
+            display block
+
+    .game-title
+        left 160px
+
+    .score-board
+        right 180px
+        width 200px
+        padding-right 100px
+        text-align right
+
+        .small-label
+            width 200px
+
+        .slash, .guessed-incorrectly
+            opacity 0.6
+
+        .post-score-label
+            display none
+            font-weight 100
+
+        &:hover .post-score-label
+            display inline
+
+        .logged-in-employee
+            position absolute
+            right 20px
+            top 37px
+            width 68px
+            height 68px
+            background rgb(91, 115, 130)
+
+            .photo
+                height 68px
+                width 68px
+
+            .name
+                display none
+
+    .game-window
+        position fixed
+        box-sizing border-box
+        top 50%
+        height 400px
+        margin-top -310px
+        left 50%
+        width 780px
+        margin-left -320px
+
+        // .employee-frame
+        //     background url('../images/frame.png')
+        //     width: 678px
+        //     height: 678px
+        //     position: fixed
+        //     margin-left: -88px
+        //     top: 0
+        //     left: 0
+        //     margin-top: -88px
+
+        .current-employee
+            position absolute
+            left 0
+            top 0
+            height 399px
+            width 399px
+
+            .photo
+                height 399px
+                width 399px
+
+            .name
+                display none
+
+            &.guessed-correctly .photo
+                -webkit-filter grayscale(0)
+                opacity 1
+
+        .possible-names
+            position absolute
+            overflow: hidden
+            width 380px
+            height 401px
+            left 400px
+            top -1px
+
+            &.guessed-correctly .employee
+                opacity 0
+
+            &.guessed-correctly .employee.guessed-correctly
+                opacity 1
+
+            .employee
+                position absolute
+                //left -100px
+                //transition left 0.7s
+                height 40px
+                width 380px
+                box-shadow none
+                background transparent
+                transition opacity 0.5s
+
+                .photo
+                    position absolute
+                    left -41px
+                    transition left 0.4s
+                    width 40px
+                    height 40px
+                    z-index 2
+
+                &:before
+                    content " "
+                    display block
+                    position absolute
+                    transition left 0.4s
+                    left -41px
+                    top 0
+                    height 40px
+                    width 40px
+                    z-index 1
+                    background rgb(41, 65, 80)
+                    box-shadow 0 0 0 1px rgb(41, 65, 80)
+
+                .name
+                    transition padding 0.4s
+                    display inline-block
+                    height 100%
+                    width auto
+                    line-height 40px
+                    font-size 28px
+                    color rgb(41, 65, 80)
+                    opacity 1
+                    text-align left
+                    position absolute
+                    top 0
+                    margin-top 0
+                    padding 0 14px
+
+                    .first-name
+                        display inline-block
+                        width 0
+                        overflow hidden
+
+                    .last-name
+                        display inline-block
+
+                &:hover, &.guessed-correctly
+                    //left 0
+
+                    .name .first-name
+                        width auto
+
+                    .name
+                        box-shadow 0 0 0 1px rgb(41, 65, 80)
+                        background rgb(41, 65, 80)
+                        color #fff
+
+                &.guessed
+
+                    .name
+                        padding-left 54px
+
+                    .photo, &:before
+                        left 0
+
+.submit-score-button
+    float right
+    margin-top -16px
+
+.modal-high-scores-list
+
+    .employee
+        display block
+        position relative
+        height 40px
+        width 100%
+        box-sizing border-box
+        box-shadow none
+        background transparent
+        transition opacity 0.5s
+        margin-bottom 1px
+
+        &:before
+            content " "
+            display block
+            position absolute
+            transition left 0.4s
+            left 0
+            top 0
+            height 40px
+            width 40px
+            z-index 1
+            background rgb(41, 65, 80)
+            box-shadow 0 0 0 1px rgb(41, 65, 80)
+
+        .photo
+            position absolute
+            left 0
+            width 40px
+            height 40px
+            z-index 2
+            -webkit-filter grayscale(1)
+            opacity 0.8
+
+        .name, .score
+            font-weight 100
+            box-sizing border-box
+            padding-left 50px
+            padding-right 100px
+            overflow hidden
+            text-overflow ellipsis
+            display inline-block
+            height 100%
+            width auto
+            line-height 40px
+            font-size 28px
+            color rgb(41, 65, 80)
+            opacity 1
+            text-align left
+            position absolute
+            top 0
+            margin-top 0
+
+        .score
+            position: absolute
+            text-align right
+            right 0
+            width 220px
+            padding 0
+
+@media (max-width: 768px)
+
+    .facewall-game
+
+        *
+            position static
+
+        .game-title, .employee-sidebar
+            display none
+
+        .game-window
+            position fixed
+            top 0
+            left 0
+            margin 0
+            width 100%
+
+            .current-employee
+                position fixed
+                top 0
+                left 0
+
+                &, & .employee, & .photo
+                    position absolute
+                    width 100%
+                    height 100%
+
+            .possible-names
+                position fixed
+                background #fff
+                overflow auto
+                border-top 1px solid rgb(41, 65, 80)
+                width 100%
+                left: 0
+                margin: 0
+
+                .employee
+                    position static
+                    width 100%
+
+                    &:before
+                        display none
+
+                    .name
+                        display block
+                        width 100%
+
+                    &:hover
+
+                        .name .first-name
+                            width 0
+
+                        .name
+                            box-shadow none
+                            background #fff
+                            color rgb(41, 65, 80)
+
+                    &.guessed:hover, &.guessed-correctly
+
+                        .name .first-name
+                            width auto
+
+                        .name
+                            box-shadow 0 0 0 1px rgb(41, 65, 80)
+                            background rgb(41, 65, 80)
+                            color #fff
+
+                    .photo
+                        opacity 0
+
+                    &.guessed .photo
+                        opacity 1
+
+        .score-board
+            position fixed
+            background transparent
+            box-shadow none
+            top 10px
+            bottom auto
+            right 10px
+            text-shadow 0 1px rgb(41, 65, 80)
+
+            .post-score-label
+                display none
+
+            *
+                color #fff
+
+    .submit-score-button
+        float none
+        margin 14px 0 0
+        display block
+
+@-webkit-keyframes facewall-sidebar
+    0%
+        -webkit-transform translateY(0px)
+
+    100%
+        -webkit-transform translateY(1600px)

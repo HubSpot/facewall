@@ -1,0 +1,14 @@
+<div class="modal" {{#if id}}id="{{id}}"{{/if}}>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>{{{header}}}</h3>
+    </div>
+    <div class="modal-body">
+        {{{body}}}
+    </div>
+    <div class="modal-footer">
+        {{#eachWithFn buttons}}
+            <a href="{{#if href}}{{href}}{{else}}#{{/if}}" class="{{#if class}}{{class}}{{else}}btn{{/if}}" {{#if close}}data-dismiss="modal"{{/if}}>{{text}}</a>
+        {{/eachWithFn}}
+    </div>
+</div>

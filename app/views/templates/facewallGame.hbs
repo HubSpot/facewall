@@ -1,0 +1,43 @@
+<style>
+    html, body {
+        overflow: hidden;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        h1 {
+            color: red;
+        }
+
+        .employee .name .first-name {
+            line-height: 24px;
+        }
+    }
+</style>
+
+<div class="full-screen-fixed facewall facewall-game with-scroll">
+    <div class="game-title">
+        <span class="small-label">{{company_name}}'s</span>
+        Facewall,<span style="display: inline-block; width: 3px"> </span>The<span style="display: inline-block; width: 9px"> </span>Game
+    </div>
+    <div class="score-board">
+        <span class="small-label"><span class="post-score-label">Submit </span>Score</span>
+        <span class="guessed-correctly"></span><span class="slash">/</span><span class="guessed-incorrectly"></span>
+        <span class="logged-in-employee"></span>
+    </div>
+    <div class="employee-sidebar-wrapper">
+        <div class="employee-sidebar left top hidden"></div>
+        <div class="employee-sidebar left bottom hidden"></div>
+    </div>
+    <div class="employee-sidebar-wrapper">
+        <div class="employee-sidebar right top hidden"></div>
+        <div class="employee-sidebar right bottom hidden"></div>
+    </div>
+    <div class="game-window">
+        <div class="current-employee"></div>
+        <div class="possible-names"></div>
+    </div>
+</div>

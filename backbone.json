@@ -1,0 +1,25 @@
+{
+    "name": "facewall",
+    "type": "brunch",
+    "repoPath": "facewall",
+    "artifactId": "facewall",
+    "contextPath": "facewall",
+    "loadBalancer": "app",
+    "loadBalancerRoutes": [
+        ["facewall"]
+    ],
+    "no_end_to_end_ssl": true,
+    "postDeployTests": [],
+    "warmupUrl": "/warmup",
+    "successString": "SUCCESS",
+    "servers": [
+        {
+            "host": "your-amazon-server-qa.amazonaws.com",
+            "environment": "qa"
+        },
+        {
+            "host": "your-amazon-server-prod.amazonaws.com",
+            "environment": "prod"
+        }
+    ]
+}
