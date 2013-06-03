@@ -6,6 +6,7 @@
     <title>Facewall by HubSpot</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!--[if lt IE 9]>
@@ -13,32 +14,54 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Facewall</h1>
-        <p></p>
 
-        <p class="view"><a href="https://github.com/HubSpot/facewall">View the Project on GitHub <small>HubSpot/facewall</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/HubSpot/facewall/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/HubSpot/facewall/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/HubSpot/facewall">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
+<div class="wrapper">
       <section>
-        <h1>
-<a name="facewall" class="anchor" href="#facewall"><span class="octicon octicon-link"></span></a>Facewall</h1>
+        <a class="fork-button" href="https://github.com/hubspot/facewall" target="_blank">On GitHub</a>
+        <div class="main-title"><span class="small-label">HubSpot's</span> Facewall</div>
+</section>
+</div>
 
-<p>An open-source version of HubSpot's Facewall and Facewall game. <strong>More information coming soon.</strong></p>
+  <div class="stripe topper">Be proud of your organization.</div>
 
-<h2>
-<a name="configuring" class="anchor" href="#configuring"><span class="octicon octicon-link"></span></a>Configuring</h2>
+    <div class="wall">
+      <img src="images/wall.png" />
+      <script>$(function(){$('.wall img').css('opacity', 1);});</script>
+    </div>
+
+    <div class="wrapper">
+      <section>
+
+<h2>About the Facewall</h2>
+
+<p>In 2011, <a href="http://hubspot.com?utm_source=github&amp;utm_medium=social&amp;utm_content=facewall" target="_blank">HubSpot</a> had fewer than 200 employees. By 2013, this number had more than doubled.</p>
+
+<p>To maintain its small-company feel and startup culture, HubSpot decided to put a digital wall of faces in its lobby and on the web. The display in the lobby rotates through faces of different HubSpotters, and the online version lets you search for people you work with. There's even a Facewall Game which you can play to challenge yourself to see how well you know the people you work with.</p>
+
+<h2>Elsewhere</h2>
+
+<ul>
+  <li><a href="http://tech.co/company-culture-of-hubspot-2013-04" target="blank">Tech.co – Company Culture of HubSpot</a></li>
+  <li><a href="http://instagram.com/p/XIjP6gtx2i/" target="blank">Instagram</a></li>
+</ul>
+
+</section>
+</div>
+
+
+<div class="stripe">Setting up the Facewall.</div>
+<div class="grey-background">
+
+    <div class="wrapper">
+      <section>
+
+<p>The Facewall is a <a href="https://github.com/brunch/brunch">Brunch</a> app. Please refer to their documentation for general setup, configuration, and deployment. You can also find more information in the <a href="https://github.com/HubSpot/facewall/blob/master/README.md" target="_blank">README on GitHub</a>.</p>
+
+<h2>Configuring</h2>
 
 <ul>
 <li>
-<p>First thing you'll want to do is update the following files:</p>
+<p>First thing you'll want to do is change some variables (like <code>company_name</code>) in the following files:</p>
 
 <ul>
 <li><a href="https://github.com/HubSpot/facewall/blob/master/config.coffee">config.coffee</a></li>
@@ -76,12 +99,17 @@
 
 <p>See <a href="http://brunch.io/#deploying">Brunch's guide on deploying</a>.</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/HubSpot">HubSpot</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
     </div>
+
+
+</div>
+    <div class="stripe topper">Learn your organization.</div>
+    <div class="game">
+      <h2>Facewall Game</h2>
+      <video src="videos/game.mov" autoplay="true" loop="true" />
+    </div>
+
+
     <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>

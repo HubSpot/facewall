@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-title {
+    color: #294150;
+    font-weight: 100;
+    font-size: 47px;
+    line-height: 50px;
+}
+
+.fork-button {
+    float: right;
+    font-size: 18px;
+    background: #445560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 7px 23px;
+    margin-top: 24px;
+}
+
+.small-label {
+    font-size: 30px;
+    line-height: 22px;
+    position: relative;
+    font-weight: 600;
+    display: block;
+}
+
+.grey-background {
+    background: #eee;
+}
+
+.stripe {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    background: #445560;
+    padding: 25px 20px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.stripe.topper {
+    border-bottom: 1px solid rgb(25, 45, 58);
+}
+
+.wall {
+    width: 100%;
+    position: relative;
+    background: #445560;
+}
+
+.wall h2 {
+    left: 50%;
+    width: 300px;
+    text-align: center;
+    margin-left: -150px;
+    position: absolute;
+    font-weight: 200;
+    font-size: 40px;
+    background: #445560;
+}
+
+.wall img {
+    -webkit-transition: opacity 3s;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 640px;
+    display: block;
+    opacity: 0.3;
+}
+
+.game {
+    width: 100%;
+    background: rgb(87, 102, 112);
+    overflow: hidden;
+    border-bottom: 1px solid rgb(51, 73, 88);
+    padding-top: 35px;
+}
+
+.game h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.game video {
+    width: 1080px;
+    display: block;
+    margin: 50px auto -3px;
+    box-shadow: 0 -17px #ccc, 0 -17px 0 1px rgb(51, 73, 88), 0 0 0 1px rgb(51, 73, 88);
+    border-radius: 6px 6px 0 0;
+    max-width: 80%;
+}
+
+.footer {
+    background: #445560;
+    padding: 20px;
+}
