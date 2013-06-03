@@ -241,3 +241,7 @@
 body .wistia-fancybox #fancybox-overlay {
     background: rgb(27, 53, 70);
 }
+
+body .wistia-fancybox .fancybox-close {
+    box-shadow: none;
+}
