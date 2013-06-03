@@ -200,3 +200,38 @@
         font-size: 19px;
     }
 }
+
+/* CTA */
+
+.hs-cta-wrapper {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.hs-cta-wrapper .hs-cta-node {
+    visibility: visible !important;
+}
+
+.hs-cta-wrapper a {
+    font-size: 18px;
+    background: #445560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 7px 23px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.hs-cta-wrapper a:hover {
+    background: rgb(70, 131, 170);
+}
+
+.hs-cta-wrapper a span {
+    opacity: 0.8;
+    font-size: 14px;
+    margin-top: 3px;
+    display: block;
+}
