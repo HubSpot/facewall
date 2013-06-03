@@ -20,6 +20,10 @@
     margin-top: 24px;
 }
 
+.fork-button:hover {
+    background: rgb(70, 131, 170);
+}
+
 .small-label {
     font-size: 30px;
     line-height: 22px;
@@ -186,6 +190,10 @@
         background: #fff;
         color: #445560;
         margin-top: 0;
+    }
+
+    .fork-button:hover {
+        background: #fff;
     }
 
     .stripe {
