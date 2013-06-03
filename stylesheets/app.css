@@ -51,6 +51,7 @@
     width: 100%;
     position: relative;
     background: #445560;
+    overflow: hidden;
 }
 
 .wall h2 {
@@ -100,4 +101,20 @@
 .footer {
     background: #445560;
     padding: 20px;
+}
+
+@media (max-width: 320px) {
+    .fork-button {
+        margin-bottom: 30px;
+        float: none;
+        display: block;
+        text-align: center;
+        border: 2px solid #445560;
+        background: #fff;
+        color: #445560;
+    }
+
+    .stripe {
+        font-size: 19px;
+    }
 }
