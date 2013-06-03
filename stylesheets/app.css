@@ -235,3 +235,9 @@
     margin-top: 3px;
     display: block;
 }
+
+/* Wistia Fancybox */
+
+body .wistia-fancybox #fancybox-overlay {
+    background: rgb(27, 53, 70);
+}
