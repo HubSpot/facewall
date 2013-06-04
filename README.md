@@ -1,6 +1,8 @@
 # Facewall
 
-An open-source version of HubSpot's Facewall and Facewall game. __More information coming soon.__
+An open-source version of HubSpot's Facewall and Facewall game.
+
+### [Watch the Video](http://github.hubspot.com/facewall)
 
 ## Configuring
 
