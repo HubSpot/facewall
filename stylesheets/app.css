@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 .main-title {
@@ -69,6 +70,7 @@
     z-index: 2;
     opacity: 0.8;
     -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
 }
 
 .wall a:hover {
@@ -77,6 +79,7 @@
 
 .wall a + img {
     -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
     opacity: 0.6;
 }
 
