@@ -155,6 +155,7 @@
     box-shadow: 0 -17px #ccc, 0 -17px 0 1px rgb(51, 73, 88), 0 0 0 1px rgb(51, 73, 88);
     border-radius: 6px 6px 0 0;
     max-width: 80%;
+    background: transparent;
 }
 
 .footer {
