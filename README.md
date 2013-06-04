@@ -36,7 +36,7 @@ Facewall is a [Brunch](https://github.com/brunch/brunch) app. To run it with no 
 
 Then navigate to:
 
-    http://localhost:PORT/facewall
+    http://localhost:PORT/facewall/
 
 If you want to use SSL, you'll additionally need to set up [stunnel](https://www.stunnel.org/index.html). See the [Stunnel README](https://github.com/HubSpot/facewall/blob/master/STUNNEL_README.md) for more information.
 
