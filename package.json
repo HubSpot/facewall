@@ -2,19 +2,21 @@
     "author": "Adam Schwartz",
     "name": "facewall",
     "description": "Grid visualization of Gravatars for an organization.",
-    "version": "0.9",
-    "homepage": "",
+    "version": "0.9.0",
+    "homepage": "http://github.hubspot.com/facewall",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "git@github.com:HubSpot/facewall.git"
     },
     "engines": {
-        "node": "~0.6.10"
+        "node": ">= 0.6.10"
     },
     "scripts": {
         "start": "brunch watch --server"
     },
     "dependencies": {
+        "brunch": "~1.6.7",
+
         "javascript-brunch": "1.0.x || 1.1.x",
         "coffee-script-brunch": "1.0.x || 1.1.x",
 
