@@ -17,7 +17,7 @@ An open-source version of HubSpot's Facewall and Facewall game.
    "users":[
       {
          "id": 1,
-         "createdAt": 1282254176000,
+         "createdAt": 1282254176001,
          "email": "aschwartz@hubspot.com",
          "firstName": "Adam",
          "lastName": "Schwartz",
