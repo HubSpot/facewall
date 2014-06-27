@@ -118,7 +118,7 @@ class FaceWallGameView extends View
         renderSidebars $sidebarsRight
 
     renderLoggedInUser: =>
-        return unless app.login.context
+        return unless app.login?.context?
 
         email = app.login.context.user.email
         employeeModel = app.collections.employees.where({ email: email })[0]
@@ -138,7 +138,7 @@ class FaceWallGameView extends View
             """
 
     setupScoreSubmission: =>
-        return unless app.login.context
+        return unless app.login?.context?
 
         email = app.login.context.user.email
         employeeModel = app.collections.employees.where({ email: email })[0]
