@@ -27,7 +27,7 @@ class Application
 
                 Backbone.history.start
                     pushState: true
-                    root: '/facewall/'
+                    root: '/facewall'
 
                 Object.freeze? @
 
