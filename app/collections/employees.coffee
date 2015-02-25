@@ -32,7 +32,7 @@ class Employees extends Collection
 
     parse: (data) ->
         _.map data.users, (employee) =>
-            employee.gravatar = "https://secure.gravatar.com/avatar/#{CryptoJS.MD5(employee.email)}?d=#{defaultGravatarImage}"
+            employee.gravatar = "https://secure.gravatar.com/avatar/#{CryptoJS.MD5(employee.email.toLowerCase())}?d=#{defaultGravatarImage}"
 
             # Default to showing full name when role is not available
             employee.role = employee.firstName + ' ' + employee.lastName unless employee.role

@@ -9,7 +9,7 @@ class HighScores extends Collection
     parse: (data) ->
         # At the gamera "list" endpoint, ".item" is a list
         _.map data.item, (score) =>
-            score.gravatar = "https://secure.gravatar.com/avatar/#{CryptoJS.MD5(score.email)}?d=404&s=160"
+            score.gravatar = "https://secure.gravatar.com/avatar/#{CryptoJS.MD5(score.email.toLowerCase())}?d=404&s=160"
             _.extend score, utils.parseQueryString(score.value)
             score.name = score.name.replace('\+', ' ') if score.name
             score.email = decodeURIComponent(score.email)

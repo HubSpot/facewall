@@ -9,7 +9,7 @@ class HighScoresView extends View
         <a data-email="#{score.email}" class="employee employee-high-score">
             <span class="name">#{score.name}</span>
             <span class="score">#{score.score}</span>
-            <img class="photo" src="https://secure.gravatar.com/avatar/#{CryptoJS.MD5(score.email)}?d=404&s=160" />
+            <img class="photo" src="https://secure.gravatar.com/avatar/#{CryptoJS.MD5(score.email.toLowerCase())}?d=404&s=160" />
         </a>
     """
 

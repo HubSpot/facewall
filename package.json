@@ -2,7 +2,7 @@
     "author": "Adam Schwartz",
     "name": "facewall",
     "description": "Grid visualization of Gravatars for an organization.",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "homepage": "http://github.hubspot.com/facewall",
     "repository": {
         "type": "git",
