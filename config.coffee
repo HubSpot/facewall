@@ -7,7 +7,6 @@ exports.config =
 
         javascripts:
 
-            defaultExtension: 'coffee'
 
             joinTo:
                 'static/js/app.js': /^app/
@@ -32,7 +31,6 @@ exports.config =
                 ]
 
         stylesheets:
-            defaultExtension: 'styl'
             joinTo: 'static/css/app.css'
             order:
                 before: [
@@ -42,7 +40,6 @@ exports.config =
                 ]
 
         templates:
-            defaultExtension: 'hbs'
             joinTo: 'static/js/app.js'
 
     server:
