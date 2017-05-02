@@ -1,35 +1,30 @@
 {
-    "author": "Adam Schwartz",
-    "name": "facewall",
-    "description": "Grid visualization of Gravatars for an organization.",
-    "version": "0.9.1",
-    "homepage": "http://github.hubspot.com/facewall",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:HubSpot/facewall.git"
-    },
-    "engines": {
-        "node": ">= 0.6.10"
-    },
-    "scripts": {
-        "start": "brunch watch --server"
-    },
-    "dependencies": {
-        "brunch": "~1.6.7",
-
-        "javascript-brunch": "1.0.x || 1.1.x",
-        "coffee-script-brunch": "1.0.x || 1.1.x",
-
-        "css-brunch": "1.0.x || 1.1.x",
-        "stylus-brunch": "1.0.x || 1.1.x",
-
-        "handlebars-brunch": "1.0.x || 1.1.x",
-
-        "uglify-js-brunch": "1.0.x || 1.1.x",
-        "clean-css-brunch": "1.0.x || 1.1.x"
-    },
-    "devDependencies": {
-        "mocha": "0.14.0",
-        "expect.js": "0.1.2"
-    }
+  "author": "Adam Schwartz",
+  "name": "facewall",
+  "description": "Grid visualization of Gravatars for an organization.",
+  "version": "0.9.1",
+  "homepage": "http://github.hubspot.com/facewall",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:HubSpot/facewall.git"
+  },
+  "engines": {
+    "node": ">= 0.6.10"
+  },
+  "scripts": {
+    "start": "brunch watch --server"
+  },
+  "dependencies": {
+    "brunch": "^2.10.9",
+    "clean-css-brunch": "^2.10.0",
+    "coffee-script-brunch": "^2.10.1",
+    "css-brunch": "^2.10.0",
+    "handlebars-brunch": "^2.10.0",
+    "stylus-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2.10.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.3.0"
+  }
 }
