@@ -6,5 +6,5 @@ module.exports =
     LOGIN_BASE: 'login.hubspotqa.com'
     NAV_BASE: 'navqa.hubapi.com'
     STATIC_BASE: 'static.hubspotqa.com'
-    INTERNAL_BASE: 'internal.hubapiqa.com'
+    INTERNAL_BASE: 'private.hubapiqa.com'
     LOGIN_PORTAL: 99121841
